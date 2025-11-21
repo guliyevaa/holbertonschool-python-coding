@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Defines a square class with private size attribute"""
+"""Defines a square class with printing capability"""
 
 class Square:
     """Represents a square"""
 
     def __init__(self, size=0):
         """Initialize the square with optional size"""
-        self.size = size  # Uses the setter for validation
+        self.size = size
 
     @property
     def size(self):
@@ -25,3 +25,11 @@ class Square:
     def area(self):
         """Return the current square area"""
         return self.__size ** 2
+
+    def my_print(self):
+        """Print the square using '#' character"""
+        if self.__size == 0:
+            print()
+            return
+        for _ in range(self.__size):
+            print("#" * self.__size)
