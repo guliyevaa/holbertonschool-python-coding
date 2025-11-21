@@ -2,9 +2,8 @@
 """This module defines a class"""
 class Square:
     """Defines a square with a private size attribute."""
-
     def __init__(self, size=0):
-        """Initialize a square with optional size, with type and value checks."""
+        """Initialize a square with optional size"""
         if not isinstance(size, int):
             raise TypeError(
                 "size must be an integer"
